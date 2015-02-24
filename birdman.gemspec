@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Birdman::VERSION
   spec.authors       = ["Ahmet Abdi"]
   spec.email         = ["ahmetabdi@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Write a short summary. Required.}
+  spec.description   = %q{Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_runtime_dependency "rest-client", "~> 1.7.3"
+  spec.add_runtime_dependency "oauth2"
+  spec.add_development_dependency "rspec"
 end
