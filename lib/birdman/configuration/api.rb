@@ -4,44 +4,56 @@ module Birdman::Configuration
   class Api
     include Singleton
 
-    attr_reader :base_url, :version, :client_id, :access_token
-    attr_accessor :include_adult
+    attr_reader :base_url, :version, :client_id,
+                :client_secret, :access_token, :redirect_uri, :oauth_url
 
     def initialize
-      self.base_url = "https://api-v2launch.trakt.tv".freeze
+      self.base_url = "https://api.trakt.tv".freeze
+      self.oauth_url = "https://trakt.tv/".freeze
       self.version = 2.freeze
-      self.include_adult = false
-      self.client_id = "326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d"
-
-      # raise token = client.auth_code.get_token('authorization_code_value', :headers => {'Authorization' => 'Basic some_password'})
-      # if they give us just an client_id that meant they have an approved app
-      # unapproved apps must request oauth to work
     end
 
-    def connect(client_id, access_token)
+    def connect(client_id, client_secret, redirect_uri="urn:ietf:wg:oauth:2.0:oob")
       begin
         self.client_id = client_id
-        self.access_token = access_token
-        Birdman::Requester.get("movies/popular")
-        # Birdman::Requester.post("oauth/token", {}, {
-        #   :code => "1c8b0870a72d94e96e4fd281a83362ffb57b38f11eb3e3bc0daae67d34d4c2fa",
-        #   :client_id => "326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d",
-        #   :client_secret => "5e4a37e2cc78529661edf367489ac5929a13396c63e53c0f217d65027b5c8bbd",
-        #   :redirect_uri => "urn:ietf:wg:oauth:2.0:oob",
-        #   :grant_type => "authorization_code"
-        # })
+        self.client_secret = client_secret
+        self.redirect_uri = redirect_uri
+        authorise!
         true
       rescue Birdman::Exception::Api
         self.client_id = nil
+        self.client_secret = nil
+        self.redirect_uri = nil
+        false
+      end
+    end
+
+    # This will return the URL to retrieve the OAuth2 Authorization Code
+    def authorize_url
+      client = OAuth2::Client.new(client_id, client_secret, :site => oauth_url)
+      client.auth_code.authorize_url(:redirect_uri => redirect_uri)
+    end
+
+    # This will set the access token from the OAuth Authorization Code which gets passed in
+    # After authorising all calls to the API should be succsessful
+    def authorise!
+      begin
+        response = Birdman::Requester.post("oauth/token", {}, {
+          :client_id => "#{client_id}",
+          :client_secret => "#{client_secret}",
+          :grant_type => "client_credentials"
+        })
+        self.access_token = response.access_token
+        true
+      rescue Birdman::Exception::Api
         self.access_token = nil
         false
       end
     end
 
-    # def authorize_url
-    #   client = OAuth2::Client.new('326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d', '5e4a37e2cc78529661edf367489ac5929a13396c63e53c0f217d65027b5c8bbd', :site => 'https://trakt.tv/')
-    #   client.auth_code.authorize_url(:redirect_uri => 'urn:ietf:wg:oauth:2.0:oob')
-    # end
+    def popular_movies
+      Birdman::Requester.get("movies/popular")
+    end
 
     def url_for(action, params={})
       # params[:api_key] = api_key
@@ -51,7 +63,7 @@ module Birdman::Configuration
     end
 
     private
-      attr_writer :base_url, :version, :client_id, :access_token
+      attr_writer :base_url, :version, :client_id, :client_secret, :access_token, :redirect_uri, :oauth_url
 
   end
 end

@@ -6,10 +6,9 @@ require "birdman/exceptions"
 
 module Birdman
 
-  def self.connect(client_id, access_token, options={ include_image_language: "en", include_adult: false })
+  def self.connect(client_id, client_secret, options={})
     Birdman::Configuration::Api.instance.tap do |api|
-      api.connect(client_id, access_token)
-      api.include_adult = options[:include_adult]
+      api.connect(client_id, client_secret)
     end
   end
 
