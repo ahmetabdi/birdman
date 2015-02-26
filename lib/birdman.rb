@@ -3,6 +3,8 @@ require "birdman/version"
 require "birdman/configuration/api"
 require "birdman/requester"
 require "birdman/exceptions"
+require "birdman/models/api_resource"
+require "birdman/models/movie"
 
 module Birdman
 

@@ -8,7 +8,7 @@ module Birdman::Configuration
                 :client_secret, :access_token, :redirect_uri, :oauth_url
 
     def initialize
-      self.base_url = "https://api.trakt.tv".freeze
+      self.base_url = "https://api-v2launch.trakt.tv".freeze
       self.oauth_url = "https://trakt.tv/".freeze
       self.version = 2.freeze
     end

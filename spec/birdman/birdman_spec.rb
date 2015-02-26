@@ -9,7 +9,6 @@ describe Birdman do
 
     it "should start the configuration workflow" do
       subject
-      puts subject.popular_movies
     end
 
   end
