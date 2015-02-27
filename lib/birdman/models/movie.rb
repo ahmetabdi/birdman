@@ -28,13 +28,14 @@ class Birdman::Movie < Birdman::ApiResource
   # [Optional] 2 character language code Example: es. (String)
   # Returns all translations for a movie, including language and translated values for title, tagline and overview.
   def translations(language = nil)
-     Birdman::Requester.get("movies/#{id}/translations/#{language}")
+    Birdman::Requester.get("movies/#{id}/translations/#{language}")
   end
 
   # Paginated
   # Returns all top level comments for a movie. Most recent comments returned first.
   def comments
-    Birdman::Requester.get("movies/#{id}/comments")
+    # Birdman::Requester.get("movies/#{id}/comments")
+    Birdman::ApiPaginatedCollection.new("movies/#{id}/comments")
   end
 
   # Returns all cast and crew for a movie.

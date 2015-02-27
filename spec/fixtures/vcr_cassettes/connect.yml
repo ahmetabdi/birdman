@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-v2launch.trakt.tv/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"client_id":"326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d","client_secret":"5e4a37e2cc78529661edf367489ac5929a13396c63e53c0f217d65027b5c8bbd","grant_type":"client_credentials"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Trakt-Api-Version:
+      - '2'
+      Trakt-Api-Key:
+      - 326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d
+      Content-Length:
+      - '197'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 27 Feb 2015 13:36:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d15d72053de3f73250509ce1d67e88cb71425044180; expires=Sat, 27-Feb-16
+        13:36:20 GMT; path=/; domain=.trakt.tv; HttpOnly
+      Cache-Control:
+      - no-store
+      Etag:
+      - W/"49012f8e5e6a1d3cf1c2c3a598a36656"
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 7626045a-8196-40af-b388-63f871f3825b
+      X-Runtime:
+      - '0.032255'
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Ray:
+      - 1bf4c552d54c1389-LHR
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAxzMUQqDMAwA0Lvkux+xjUnrZaSJGZQNFetgMnb3gf+P94Vq
+        5r3P5/b0FSaQVKJGEh5HW8gQq4kpmZdC44Nq0qxLdkWJmashpoLMMjAT5aFk
+        CHBX83ntDhOo18MPCOCfvR3e57bCJCKMiAG6bbfa3/pqBr8/AAAA//8DADOW
+        Ip6PAAAA
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 13:36:21 GMT
+recorded_with: VCR 2.9.0

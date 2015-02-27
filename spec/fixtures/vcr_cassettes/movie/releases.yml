@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-v2launch.trakt.tv/movies/tron-legacy-2010/releases/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Trakt-Api-Version:
+      - '2'
+      Trakt-Api-Key:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 27 Feb 2015 13:38:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=ddbd66c2a229ec8a38e8e611365a86a9e1425044302; expires=Sat, 27-Feb-16
+        13:38:22 GMT; path=/; domain=.trakt.tv; HttpOnly
+      Cache-Control:
+      - public, max-age=14400
+      Etag:
+      - W/"c87db56d5445116778c4fe13d02e26c9"
+      Expires:
+      - Fri, 27 Feb 2015 17:38:22 GMT
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - 86e4c9c0-b280-4071-9369-8afb3aeccd66
+      X-Runtime:
+      - '0.074306'
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - REVALIDATED
+      Cf-Ray:
+      - 1bf4c84865240ccb-LHR
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA5XSPQrCMBgG4KvINzeQxP9eoGsXJxGJMUqotNCmg0qhg6OL
+        FxCPIOJBPId6CEEXCa8FD/A+vN/PeEs6K1OXrymksqCAtMmdXVitnM1SCimO
+        KKDcrIwqzHSunKGQJBecCclEj6rgW1jO/hX6njA3QBASCoJxwaTfYZEDYfQL
+        kIwPPcA6AMD8ewTp5x0qEEdMtCHymWLgIVoBBObxHtMVyDfu0W+QbIBwO4gO
+        ND4tup5RJMBoasH9ayZomc/T7nm5tu7X+nHc38819PBxVAm8xg/tUTV5Acdc
+        jhsnAwAA
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 13:38:22 GMT
+recorded_with: VCR 2.9.0

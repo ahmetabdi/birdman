@@ -51,10 +51,6 @@ module Birdman::Configuration
       end
     end
 
-    def popular_movies
-      Birdman::Requester.get("movies/popular")
-    end
-
     def url_for(action, params={})
       # params[:api_key] = api_key
       url = URI.join(base_url, action)

@@ -1,4 +1,4 @@
-class Enceladus::ApiPaginatedCollection
+class Birdman::ApiPaginatedCollection
   # Provides the implementation to handle collection of paginated resources.
   # The collection of resources are cached locally, after going to next pages the previous pages do not make
   # any request to obtain the resources again.
@@ -10,11 +10,12 @@ class Enceladus::ApiPaginatedCollection
   # The argument path refers to the TMDb api path that provides paginated resources.
   # the argument params can be used when you need to send arguments to requests when fetching new pages.
   # Example:
-  #   Enceladus::MovieCollection.new("movie/upcoming", { blah: true })
+  #   Birdman::MovieCollection.new("movie/upcoming", { blah: true })
   def initialize(path, params={})
     self.path = path
     self.params = params
     self.params[:page] = 1
+    self.params[:limit] = 10
     self.results_per_page = []
     get_results_per_page
   end
@@ -62,12 +63,12 @@ private
   attr_writer :total_pages, :total_results, :path, :params, :results_per_page
 
   def fetch_colletion
-    raise NotImplementedError.new("RESOURCE_CLASS must be defined") if self.class::RESOURCE_CLASS.nil?
+    # raise NotImplementedError.new("RESOURCE_CLASS must be defined") if self.class::RESOURCE_CLASS.nil?
 
-    response = Enceladus::Requester.get(path, params)
-    self.total_pages = response.total_pages
-    self.total_results = response.total_results
-    self.class::RESOURCE_CLASS.build_collection(response.results)
+    response = Birdman::Requester.get(path, params)
+    # self.total_pages = response.total_pages
+    # self.total_results = response.total_results
+    # self.class::RESOURCE_CLASS.build_collection(response.results)
   end
 
   def get_results_per_page

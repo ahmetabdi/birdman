@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-v2launch.trakt.tv/movies/tron-legacy-2010/comments?limit=10&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Trakt-Api-Version:
+      - '2'
+      Trakt-Api-Key:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Fri, 27 Feb 2015 13:40:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d822a68aa279076a64ff65fcb9ffaa30b1425044417; expires=Sat, 27-Feb-16
+        13:40:17 GMT; path=/; domain=.trakt.tv; HttpOnly
+      Cache-Control:
+      - public, max-age=14400
+      Etag:
+      - W/"036220a1573170fe7bdc1941f8b2644a"
+      Expires:
+      - Fri, 27 Feb 2015 17:40:17 GMT
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Pagination-Limit:
+      - '10'
+      X-Pagination-Page:
+      - '1'
+      X-Request-Id:
+      - 6dfcfe08-eb1b-4792-ad48-49ede7887123
+      X-Runtime:
+      - '0.032022'
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - HIT
+      Cf-Ray:
+      - 1bf4cb1780b70cef-LHR
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA61X247bRhL9lQpfvAEkgaQ0GplvWRsJxrvZDWAlRi4Lu0SW
+        yB41q+juphgmyL8H1ZTGmuyMgYn9JInqS9WpU+cUf/49MVVSLNf5JpslpbQt
+        cUiKZNsYD8IEDXpA2KODHYVADjorAUKDDKEhEGdqw2gBuQI6khtDY7gGsp7A
+        eEDrBUzbOTlSBd6augl2XMANVMLPAtQUYGjGaaveN6CHnQllPAV30gcwuoRY
+        P0tsCaQPi2SW+E6MJZcUe7SeZomjo6Hh7meHjji81ezSWVI6wkDVW9Tk8jRb
+        zbN0nqfbNC2Wy2K1XKRp+lOih3TWkI97rDnot6tZ0nu95/f4ydhSUiSvCfnb
+        198ns6Rz5oiB7i4+LUhmydF0p6d//DE7Ab3arJ5fAv01ckAfTAl7Y1toe2/K
+        L6D48rMkmObb7LpYrovl+iMJrh5M8Ds5kPvOydtXcplkcP1FNunq6ur/aGN8
+        pEYrPkCgsmGxUpsSLbRyNAQ3z44UCw6eiBe6eARHaO0Ig7iDEkWgQVdBENi5
+        yARr4WC48iD7D4eO8ZfeWRKH3o2Rhp1yhoNM/8Q7F/Cj9ICOIDhk34kLFE9H
+        ltCQ03ttNbv7qdGYMC5gRyX2SuUQ2cxgmOWIwQgD3+UAO9qLowVsGwzPPBgu
+        HVVmZykGhC3+ZrieQSlcOwy9jQf4z8DidDXP1ts8K1Z5cfUxFqcPFtn3HbkG
+        A2Xpk5mcXV9tLmv/MjY0/dpRGQCh1ljBB3EjDCY0UzWESZv/VG3iWxmpUnT3
+        4sAEDziQl1ZxM+0E8/s+1iIiuTchKB289FwFh+Xhc2C4nOebbZYV6aZIN0/G
+        sMVbaZjHRwHk3tqHIVzm1/e7h2BvnA9RBQ17ZDoB88xDMC0t4BfWVZ5K4WoS
+        y0mWoyKbE/wTpNo8EwFNgMpUWp5KAGGHFdzKTukYDPcK6D0tj0XTMg3S27it
+        NVwp089LQ2Ncdd5PsHfSqkZrf52Nw9I+gOz3n1yg5TzL5ulSpfoqLVbXTy7Q
+        jvi2Fv+oiuVZ/vxeHV6ITIZ2JqOn9z3ZLz49k3QzT7NtuiqyVZE/nWrmFlvy
+        jqx5Otmy58vr9WWWN9DgkbS6UcK0rBP5tk54ks0Z7PoAuFeCNXiMnTetPQvr
+        h16e/HxAVuLNgEwU0nk8txQuqZto/b43gVSfyZGPzWzU2j3Z/XSdbqBfqexj
+        9+uWTsRNN9Bs0hIWUNckwKDWMNMz2hGkM2yEF/CVtfEcDIE4nhONgqDFA7nJ
+        RD7kMN2hIVV6YNxY6q4ZvPjmJjLhaHyvnUFRf/wMhsaUDbQU821Ou+JsNKBX
+        JHSggVqkivs9UTs5joIOPmDUvQl2r1NNZ7GMtsiAk4F2+uAcdwz0oCC+7015
+        IJ5cUbg+q+s56HmHZfTQkpj8Al4aj11Mz3D9GboxXc/za50rVpu/YzksOBgu
+        G/KB3KM0Tv4jCG8u1z1E6c0qvUfpKI131qCOrUp0gnBHPsDN5eDxqvfhbM7q
+        3WeYd+OJkHH0VHI4CuFcTQ8DWbuAf9ycRXXAUE4VOEvoJ49vy3mazfPlNlsX
+        6brIPiYV2YMw3zYyHMuPAPxK+BFUszTXiO5Q/TaCYjz891/qP7/wP/s4kUe1
+        v7CNqBsKl/TBB+QqUlRlVGf4d5ODTd0gLU3vCb6j0qCFf1ONpbY4eX4XfYMc
+        IJ/eJpiGBWylQi3MOw+3sXCnWU1bNIa4gBs1uOmEGIBG8hdp0Phfiq5Q+CbV
+        wzK27xgnR30SMykbdHhQ6TMchalsRDxpD6uKQGNa3UqWvIeKfKe6Fs+j4dR8
+        ZzXZUW1YO3YBX3EVH72w/cUNVkRbVidcpetAxlULeN13nfhJNnTFFDLCKD3X
+        5OBrOzJDHAeoVTFzdFrCILaK5B8alZxK5SW+Zfje1eTGezqgbvh3+JlmUQau
+        i/TpMrA3vEdl4CP0fJib+Tq99/b0g4pshe4QaVU7o22qExOq7DGNU0d/ajfm
+        8W0x36bPi3RVXK2enO0bE96I3T8+IyZvyFvS/y+z/t+frfHpJ58PAAA=
+    http_version: 
+  recorded_at: Fri, 27 Feb 2015 13:40:17 GMT
+recorded_with: VCR 2.9.0

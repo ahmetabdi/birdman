@@ -4,10 +4,11 @@ require "birdman/configuration/api"
 require "birdman/requester"
 require "birdman/exceptions"
 require "birdman/models/api_resource"
-require "birdman/models/movie"
+require "birdman/models/api_paginated_collection"
 require "birdman/models/genre"
 require "birdman/models/search"
 require "birdman/models/show"
+require "birdman/models/movie"
 
 module Birdman
 
