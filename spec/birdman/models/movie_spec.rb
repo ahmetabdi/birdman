@@ -19,38 +19,66 @@ describe Birdman::Movie do
       expect(movie.ids.imdb).to eq("tt1104001")
       expect(movie.ids.tmdb).to eq(20526)
     end
-
   end
 
   describe ".aliases" do
     subject(:movie) { Birdman::Movie.find("tron-legacy-2010") }
     subject(:aliases) { movie.aliases }
 
-    it "should" do
-      puts aliases
+    it "should have a title" do
+      expect(aliases.first.title).to eq("Tron 2.0")
     end
 
+    it "should hae a country" do
+      expect(aliases.first.country).to eq("us")
+    end
   end
 
+  describe ".releases" do
+    subject(:movie) { Birdman::Movie.find("tron-legacy-2010") }
+    subject(:releases) { movie.releases }
 
-  # [:upcoming, :now_playing, :popular, :top_rated].each do |endpoint|
-  #   describe ".#{endpoint}" do
-  #     subject(:movies) { Enceladus::Movie.send(endpoint) }
-  #     let(:response) { build(:movie_collection_response) }
+    it "should have a country" do
+      expect(releases.first.country).to eq("us")
+    end
 
-  #     before do
-  #       stub_request(:get, /api.themoviedb.org\/3\/movie\/#{endpoint}/).to_return(status: 200, body: response.to_json)
-  #     end
+    it "should have a certification" do
+      expect(releases.first.certification).to eq("PG")
+    end
 
-  #     it "should return a Enceladus::MovieCollection" do
-  #       is_expected.to be_kind_of(Enceladus::MovieCollection)
-  #     end
+    it "should have a release date" do
+      expect(releases.first.release_date).to eq("2010-12-16")
+    end
+  end
 
-  #     it "should fetch #{endpoint} movies" do
-  #       movie = response.results.first
-  #       expect(movies.all.map(&:id)).to include movie.id
-  #     end
-  #   end
-  # end
+  describe ".translations" do
+  end
+
+  describe ".comments" do
+  end
+
+  describe ".people" do
+  end
+
+  describe ".ratings" do
+  end
+
+  describe ".related" do
+  end
+
+  describe ".stats" do
+  end
+
+  describe ".watching" do
+  end
+
+  describe "#popular" do
+  end
+
+  describe "#trending" do
+  end
+
+  describe "#updates" do
+  end
 
 end

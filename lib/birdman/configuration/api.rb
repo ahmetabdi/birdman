@@ -58,7 +58,7 @@ module Birdman::Configuration
     def url_for(action, params={})
       # params[:api_key] = api_key
       url = URI.join(base_url, action)
-      # url.query = URI.encode_www_form(params)
+      url.query = URI.encode_www_form(params) if params
       url.to_s
     end
 

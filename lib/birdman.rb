@@ -5,6 +5,9 @@ require "birdman/requester"
 require "birdman/exceptions"
 require "birdman/models/api_resource"
 require "birdman/models/movie"
+require "birdman/models/genre"
+require "birdman/models/search"
+require "birdman/models/show"
 
 module Birdman
 
