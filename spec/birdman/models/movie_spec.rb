@@ -82,13 +82,6 @@ describe Birdman::Movie do
     end }
 
     it { should be_kind_of(Birdman::ApiPaginatedCollection) }
-    it { should respond_to(:all) }
-    it { should respond_to(:next_page) }
-    it { should respond_to(:previous_page) }
-    it { should respond_to(:current_page) }
-    it { should respond_to(:first) }
-    it { should respond_to(:last) }
-    it { should respond_to(:all) }
 
     it "should have an id" do
       expect(comments.first.id).to eq(36281)
@@ -210,15 +203,33 @@ describe Birdman::Movie do
   end
 
   describe "#popular" do
-    let(:popular) { Birdman::Movie.popular }
+    let(:popular) { VCR.use_cassette("movie/popular") do
+      Birdman::Movie.popular
+    end }
+
+    it "should return an array of popular movies" do
+      expect(popular).to be_kind_of(Array)
+    end
   end
 
-  # describe "#trending" do
-  #   let(:trending) { Birdman::Movie.trending }
-  # end
+  describe "#trending" do
+    let(:trending) { VCR.use_cassette("movie/trending") do
+      Birdman::Movie.trending
+    end }
 
-  # describe "#updates" do
-  #   let(:updates) { Birdman::Movie.updates }
-  # end
+    it "should return an array of trending movies" do
+      expect(trending).to be_kind_of(Array)
+    end
+  end
+
+  describe "#updates" do
+    let(:updates) { VCR.use_cassette("movie/updates") do
+      Birdman::Movie.updates
+    end }
+
+    it "should return an array of updated movies" do
+      expect(updates).to be_kind_of(Array)
+    end
+  end
 
 end
