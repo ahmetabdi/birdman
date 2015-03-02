@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-v2launch.trakt.tv/movies/tron-legacy-2010/aliases
+    uri: https://api-v2launch.trakt.tv/movies/tron-legacy-2010/releases/
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 27 Feb 2015 13:37:18 GMT
+      - Mon, 02 Mar 2015 11:59:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d0f614d37be09b7312ef812f34b3096ed1425044238; expires=Sat, 27-Feb-16
-        13:37:18 GMT; path=/; domain=.trakt.tv; HttpOnly
+      - __cfduid=d6516f4ea502fd500ca7f96154b642a1d1425297573; expires=Tue, 01-Mar-16
+        11:59:33 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
       Etag:
-      - W/"4fac30fe8c809327b199a1e291a916c8"
+      - W/"c87db56d5445116778c4fe13d02e26c9"
       Expires:
-      - Fri, 27 Feb 2015 17:37:18 GMT
+      - Mon, 02 Mar 2015 15:59:33 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -50,29 +50,26 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - ba0b9e7e-576a-4be9-b242-599060c6b024
+      - 86e4c9c0-b280-4071-9369-8afb3aeccd66
       X-Runtime:
-      - '0.017935'
+      - '0.074306'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
       Cf-Ray:
-      - 1bf4c6ba4c6b06dc-LHR
+      - 1c0cefabe59f1389-LHR
       Content-Encoding:
       - gzip
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA4XSTUsCURQG4L9yuZs2FmG7WdsuCqJV0WIcp3FyGmWcoTQE
-        cwjGPqCoRMw+bCdoCGkNZW2m9te/0PUjccK/ENUijnOx/fO+99zDWdnGuqwr
-        IubwkhZVkX9qGvuwEDVUXUtgDhtxnPKNmn+FMhF2ypqs85II7JrmsRxa5mPG
-        W+n1UFZ5gOMywOSmlSYv5JlD5ILUWjvkiTRIndikAVKaAZ9YXJhH7+kTtIDm
-        RIkPRQEOeuf5YUICzQTG/vK79lcCJqieQg45Oc25j8SdsgRsmDEpo3L05b8Z
-        AZOC3rZJFmT0cSiQlMVQUhb0TbigmOLByM/uFXgvnVVYW9/Y8kpGYUgErGOd
-        D5uFzm62n77qWvmP29q4zfdOG53qUdvO9c4O2o/ZftHuWnl4uCOJzz17ULrm
-        kGtag1LRLdSRu190L49BJgIPhpoWNavUvBs2C9Ss0EyFZh6o2QSZ9RhOrX4B
-        hoVWN2gDAAA=
+        H4sIAAAAAAAAA5XSPQrCMBgG4KvINzeQxP9eoGsXJxGJMUqotNCmg0qhg6OL
+        FxCPIOJBPId6CEEXCa8FD/A+vN/PeEs6K1OXrymksqCAtMmdXVitnM1SCimO
+        KKDcrIwqzHSunKGQJBecCclEj6rgW1jO/hX6njA3QBASCoJxwaTfYZEDYfQL
+        kIwPPcA6AMD8ewTp5x0qEEdMtCHymWLgIVoBBObxHtMVyDfu0W+QbIBwO4gO
+        ND4tup5RJMBoasH9ayZomc/T7nm5tu7X+nHc38819PBxVAm8xg/tUTV5Acdc
+        jhsnAwAA
     http_version: 
-  recorded_at: Fri, 27 Feb 2015 13:37:18 GMT
+  recorded_at: Mon, 02 Mar 2015 11:59:33 GMT
 recorded_with: VCR 2.9.0

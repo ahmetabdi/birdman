@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-v2launch.trakt.tv/movies/updates/2015-03-02
+    uri: https://api-v2launch.trakt.tv/movies/tron-legacy-2010/ratings
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Mon, 02 Mar 2015 08:11:49 GMT
+      - Mon, 02 Mar 2015 11:59:33 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,40 +35,38 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=ddd0f86a5511257a90a2e775d9dbf57bb1425283909; expires=Tue, 01-Mar-16
-        08:11:49 GMT; path=/; domain=.trakt.tv; HttpOnly
+      - __cfduid=d7135f8ba8c3a688db6dcb454552e13c01425297573; expires=Tue, 01-Mar-16
+        11:59:33 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
       Etag:
-      - W/"6666cd76f96956469e7be39d750cc7d9"
+      - W/"d528ee72072266b91c776b7d4c29b4ea"
       Expires:
-      - Mon, 02 Mar 2015 12:11:49 GMT
+      - Mon, 02 Mar 2015 15:59:33 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
       - SAMEORIGIN
-      X-Pagination-Limit:
-      - '10'
-      X-Pagination-Page:
-      - '1'
       X-Request-Id:
-      - 737d692b-6db6-49b3-8939-1d5f38611efd
+      - bff600d9-57fd-4c8b-b91f-1778810775d4
       X-Runtime:
-      - '0.008585'
+      - '0.224554'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
-      - MISS
+      - HIT
       Cf-Ray:
-      - 1c0ba211f04f06be-LHR
+      - 1c0cefab1d870cef-LHR
       Content-Encoding:
       - gzip
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA4uOBQApu0wNAgAAAA==
+        H4sIAAAAAAAAAxXKQQqDMBBA0bv89VAyycQxc5tKS8lGQdNuxLsXt493sj9H
+        Xz+EP6zVpsJvG++DqG4qvPox9r58R99W4kSJnJOQiTwLhZiKYIRmFSpR1IWJ
+        cCuC336HmdDUXGiETVXQRKhlu64/pygt3IIAAAA=
     http_version: 
-  recorded_at: Mon, 02 Mar 2015 08:11:49 GMT
+  recorded_at: Mon, 02 Mar 2015 11:59:33 GMT
 recorded_with: VCR 2.9.0

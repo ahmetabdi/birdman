@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Birdman::Movie do
-  let(:movie) { VCR.use_cassette("movie/movie") do
+  let(:movie) { VCR.use_cassette("movies/id") do
     Birdman::Movie.find("tron-legacy-2010")
   end }
 
@@ -23,7 +23,7 @@ describe Birdman::Movie do
   end
 
   describe ".aliases" do
-    subject(:aliases) { VCR.use_cassette("movie/aliases") do
+    subject(:aliases) { VCR.use_cassette("movies/aliases") do
       movie.aliases
     end }
 
@@ -37,7 +37,7 @@ describe Birdman::Movie do
   end
 
   describe ".releases" do
-    subject(:releases) { VCR.use_cassette("movie/releases") do
+    subject(:releases) { VCR.use_cassette("movies/releases") do
       movie.releases
     end }
 
@@ -55,7 +55,7 @@ describe Birdman::Movie do
   end
 
   describe ".translations" do
-    subject(:translations) { VCR.use_cassette("movie/translations") do
+    subject(:translations) { VCR.use_cassette("movies/translations") do
       movie.translations
     end }
 
@@ -77,7 +77,7 @@ describe Birdman::Movie do
   end
 
   describe ".comments" do
-    subject(:comments) { VCR.use_cassette("movie/comments") do
+    subject(:comments) { VCR.use_cassette("movies/comments") do
       movie.comments
     end }
 
@@ -88,7 +88,7 @@ describe Birdman::Movie do
     end
 
     it "should have an comment" do
-      expect(comments.first.comment).to eq("This one has a far better plot than the original and everything else is also improved slightly. I don't get why everyone was bitching about it when it came out.")
+      expect(comments.first.comment).to be_kind_of(String)
     end
 
     it "should have an spoiler" do
@@ -133,7 +133,7 @@ describe Birdman::Movie do
   end
 
   describe ".people" do
-    subject(:people) { VCR.use_cassette("movie/people") do
+    subject(:people) { VCR.use_cassette("movies/people") do
       movie.people
     end }
 
@@ -143,21 +143,21 @@ describe Birdman::Movie do
   end
 
   describe ".ratings" do
-    subject(:ratings) { VCR.use_cassette("movie/ratings") do
+    subject(:ratings) { VCR.use_cassette("movies/ratings") do
       movie.ratings
     end }
 
     it "should return a rating" do
-      expect(ratings.rating).to eq(7.49677)
+      expect(ratings.rating).to eq(7.49591)
     end
 
     it "should return vote count" do
-      expect(ratings.votes).to eq(5723)
+      expect(ratings.votes).to eq(5741)
     end
   end
 
   describe ".related" do
-    subject(:related) { VCR.use_cassette("movie/related") do
+    subject(:related) { VCR.use_cassette("movies/related") do
       movie.related
     end }
 
@@ -167,12 +167,12 @@ describe Birdman::Movie do
   end
 
   describe ".stats" do
-    subject(:stats) { VCR.use_cassette("movie/stats") do
+    subject(:stats) { VCR.use_cassette("movies/stats") do
       movie.stats
     end }
 
     it "should return watcher count" do
-      expect(stats.watchers).to eq(26539)
+      expect(stats.watchers).to eq(26754)
     end
 
     it "should return play counts" do
@@ -193,7 +193,7 @@ describe Birdman::Movie do
   end
 
   describe ".watching" do
-    subject(:watching) { VCR.use_cassette("movie/watching") do
+    subject(:watching) { VCR.use_cassette("movies/watching") do
       movie.watching
     end }
 
@@ -203,7 +203,7 @@ describe Birdman::Movie do
   end
 
   describe "#popular" do
-    let(:popular) { VCR.use_cassette("movie/popular") do
+    let(:popular) { VCR.use_cassette("movies/popular") do
       Birdman::Movie.popular
     end }
 
@@ -213,7 +213,7 @@ describe Birdman::Movie do
   end
 
   describe "#trending" do
-    let(:trending) { VCR.use_cassette("movie/trending") do
+    let(:trending) { VCR.use_cassette("movies/trending") do
       Birdman::Movie.trending
     end }
 
@@ -223,7 +223,7 @@ describe Birdman::Movie do
   end
 
   describe "#updates" do
-    let(:updates) { VCR.use_cassette("movie/updates") do
+    let(:updates) { VCR.use_cassette("movies/updates") do
       Birdman::Movie.updates
     end }
 

@@ -5,7 +5,8 @@ class Birdman::Genre < Birdman::ApiResource
   attr_accessor *RESOURCE_ATTRIBUTES
 
   # Get a list of all genres, including names and slugs.
-  # Possible values: movies, shows
+  # It's a good idea to cache this list in your app.
+  # Possible type values: movies, shows
   def self.list(type)
     Birdman::Requester.get("genres/#{type}")
   end

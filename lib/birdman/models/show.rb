@@ -34,7 +34,7 @@ class Birdman::Show < Birdman::ApiResource
   # Paginated
   # Returns all top level comments for a show. Most recent comments returned first.
   def comments
-    Birdman::Requester.get("shows/#{id}/comments")
+    Birdman::ApiPaginatedCollection.new("shows/#{id}/comments")
   end
 
   # OAuth Required

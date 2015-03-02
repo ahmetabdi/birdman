@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 27 Feb 2015 13:37:35 GMT
+      - Mon, 02 Mar 2015 11:59:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d6e2447c3c7303b7a90e391020873ce861425044254; expires=Sat, 27-Feb-16
-        13:37:34 GMT; path=/; domain=.trakt.tv; HttpOnly
+      - __cfduid=d0b261f307679cc4002120d985445d1cc1425297571; expires=Tue, 01-Mar-16
+        11:59:31 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
       Etag:
-      - W/"10a3dece9343034382144c3252544776"
+      - W/"1d8014a0036935eaac9063fe0afb07a8"
       Expires:
-      - Fri, 27 Feb 2015 17:37:35 GMT
+      - Mon, 02 Mar 2015 15:59:31 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -50,15 +50,15 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - 6c8c12bd-3990-485a-bd2f-b5628aeabc0e
+      - 36fe376d-40c6-4ef6-97e5-98e4b6a9542c
       X-Runtime:
-      - '0.008978'
+      - '0.210939'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
-      - REVALIDATED
+      - HIT
       Cf-Ray:
-      - 1bf4c7207dc91389-LHR
+      - 1c0cefa0c2780a7e-LHR
       Content-Encoding:
       - gzip
     body:
@@ -68,5 +68,5 @@ http_interactions:
         Tli0FKDou2+rxSfMfjxAOILPUMfChDht0BOW/WJQcQ0LYUv7DIXl/1qm9yqf
         GoT4m4bHmAhXzAKCvchx7ZrrugEyPzredAAAAA==
     http_version: 
-  recorded_at: Fri, 27 Feb 2015 13:37:35 GMT
+  recorded_at: Mon, 02 Mar 2015 11:59:32 GMT
 recorded_with: VCR 2.9.0
