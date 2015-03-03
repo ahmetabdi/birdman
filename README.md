@@ -1,6 +1,6 @@
 # Birdman
 
-TODO: Write a gem description
+![Trakt Banner](https://raw.github.com/ahmetabdi/birdman/master/birdman.png)
 
 ## Installation
 
