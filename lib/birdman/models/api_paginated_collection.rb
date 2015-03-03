@@ -58,12 +58,8 @@ private
   attr_writer :total_pages, :total_results, :path, :params, :results_per_page
 
   def fetch_colletion
-    # raise NotImplementedError.new("RESOURCE_CLASS must be defined") if self.class::RESOURCE_CLASS.nil?
-
     response = Birdman::Requester.get(path, params)
-    # self.total_pages = response.total_pages
-    # self.total_results = response.total_results
-    # self.class::RESOURCE_CLASS.build_collection(response.results)
+    self.class::RESOURCE_CLASS.build_collection(response)
   end
 
   def get_results_per_page

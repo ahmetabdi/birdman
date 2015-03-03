@@ -18,14 +18,9 @@ module Birdman
     end
   end
 
-  # RESOURCE_ATTRIBUTES = [ :name, :slug ]
-
-  # attr_accessor *RESOURCE_ATTRIBUTES
-
   # Searches can use queries or ID lookups. Queries will search fields like the title and description.
   # ID lookups are helpful if you have an external ID and want to get the trakt ID and info.
   # This method will search for movies, shows, episodes, people, and lists.
-
   # Perform a text query that searches titles, descriptions, translated titles, aliases, and people.
   # Items searched include movies, shows, episodes, people, and lists.
   # Results are ordered by the most relevant score.

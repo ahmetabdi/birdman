@@ -63,9 +63,3 @@ module Birdman::Configuration
 
   end
 end
-
-# Client ID:
-# 326c4d41f98b24ab6ba0d38b3c3e638f9fb319973f9245b8f785741b474f7d2d
-
-# Client Secret:
-# 5e4a37e2cc78529661edf367489ac5929a13396c63e53c0f217d65027b5c8bbd
