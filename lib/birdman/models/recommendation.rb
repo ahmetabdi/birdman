@@ -1,5 +1,5 @@
 # Recommendations are based on the watched history for a user and their friends.
- # There are other factors that go into the algorithm as well to further personalize what gets recommended.
+# There are other factors that go into the algorithm as well to further personalize what gets recommended.
 class Birdman::Recommendation < Birdman::ApiResource
 
   # Personalized movie recommendations for a user.
