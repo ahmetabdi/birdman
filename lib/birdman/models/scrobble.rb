@@ -5,7 +5,7 @@ class Birdman::Scrobble < Birdman::ApiResource
 
   # Use this method when the video intially starts playing or is unpaused.
   # This will remove any playback progress if it exists.
-  # [OAuth Required]
+  # 🔒 OAuth Required
   def self.start
     Birdman::Requester.post("scrobble/start", {}, {
       :movie => movie, # movie or episode object.
@@ -19,7 +19,7 @@ class Birdman::Scrobble < Birdman::ApiResource
   # The playback progress will be saved and GET /sync/playback can be used
   # to resume the video from this exact position.
   # Unpause a video by calling the GET /scrobble/start method again.
-  # [OAuth Required]
+  # 🔒 OAuth Required
   def self.pause
     Birdman::Requester.post("scrobble/pause", {}, {
       :movie => movie, # movie or episode object.
@@ -31,7 +31,7 @@ class Birdman::Scrobble < Birdman::ApiResource
 
 
   # Use this method when the video is stopped or finishes playing on its own. If the progress is above 80%, the video will be scrobbled and the action will be set to scrobble.If the progress is less than 80%, it will be treated as a pause and the action will be set to pause. The playback progress will be saved and GET /sync/playback can be used to resume the video from this exact position.
-  # [OAuth Required]
+  # 🔒 OAuth Required
   def self.stop
     Birdman::Requester.post("scrobble/stop", {}, {
       :movie => movie, # movie or episode object.

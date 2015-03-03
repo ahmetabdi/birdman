@@ -4,12 +4,11 @@ class Birdman::Show < Birdman::ApiResource
 
   attr_accessor *RESOURCE_ATTRIBUTES
 
-  # Returns a single shows's details by trakt ID, trakt slug, or IMDB ID (String)
-  # Examples:
-  #   Birdman::Show.find("550")
-  #   Birdman::Show.find("tron-legacy-2010")
-  #   Birdman::Show.find("tt0137523")
-  #
+  # Returns a single shows's details.
+  # If you get extended info, the airs object is relative to the show's country.
+  # You can use the day, time, and timezone to construct your own date then convert it to whatever timezone your user is in.
+  # Note: When getting full extended info, the status field can have a value of returning series (airing right now),
+  # in production (airing soon), canceled, or ended.
   def self.find(id)
     build_single_resource(Birdman::Requester.get("shows/#{id}", {}), id)
   end
@@ -31,22 +30,22 @@ class Birdman::Show < Birdman::ApiResource
     Birdman::Requester.get("shows/#{id}/translations/#{language}")
   end
 
-  # Paginated
   # Returns all top level comments for a show. Most recent comments returned first.
+  # 📄 Pagination
   def comments
     Birdman::ApiPaginatedCollection.new("shows/#{id}/comments")
   end
 
-  # OAuth Required
   # Returns collection progress for show including details on all seasons and episodes.
   # The next_episode will be the next episode the user should collect, if there are no upcoming episodes it will be set to null.
+  # 🔒 OAuth Required
   def collection_progress
     Birdman::Requester.get("shows/#{id}/progress/collection")
   end
 
-  # OAuth Required
   # Returns watched progress for show including details on all seasons and episodes.
   # The next_episode will be the next episode the user should watch, if there are no upcoming episodes it will be set to null.
+  # 🔒 OAuth Required
   def watched_progress
     Birdman::Requester.get("shows/#{id}/progress/watched")
   end
@@ -78,19 +77,19 @@ class Birdman::Show < Birdman::ApiResource
   end
 
   # Returns the most popular shows. Popularity is calculated using the rating percentage and the number of ratings.
-  # Paginated
+  # 📄 Pagination
   def self.popular
     Birdman::Requester.get("shows/popular")
   end
 
   # Returns all shows being watched right now. Shows with the most users are returned first.
-  # Paginated
+  # 📄 Pagination
   def self.trending
     Birdman::Requester.get("shows/trending")
   end
 
   # Returns all shows updated since the specified UTC date. We recommended storing the date you can be efficient using this method moving forward.
-  # Paginated
+  # 📄 Pagination
   def self.updates(start_date=Time.now)
     Birdman::Requester.get("shows/updates/#{start_date.strftime("%Y-%m-%d")}")
   end

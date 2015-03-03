@@ -4,12 +4,7 @@ class Birdman::Movie < Birdman::ApiResource
 
   attr_accessor *RESOURCE_ATTRIBUTES
 
-  # Returns a single movie's details by trakt ID, trakt slug, or IMDB ID (String)
-  # Examples:
-  #   Birdman::Movie.find("550")
-  #   Birdman::Movie.find("tron-legacy-2010")
-  #   Birdman::Movie.find("tt0137523")
-  #
+  # Returns a single movie's details.
   def self.find(id)
     build_single_resource(Birdman::Requester.get("movies/#{id}", {}), id)
   end
@@ -31,10 +26,9 @@ class Birdman::Movie < Birdman::ApiResource
     Birdman::Requester.get("movies/#{id}/translations/#{language}")
   end
 
-  # Paginated
   # Returns all top level comments for a movie. Most recent comments returned first.
+  # 📄 Pagination
   def comments
-    # Birdman::Requester.get("movies/#{id}/comments")
     Birdman::ApiPaginatedCollection.new("movies/#{id}/comments")
   end
 
@@ -53,9 +47,10 @@ class Birdman::Movie < Birdman::ApiResource
     Birdman::Requester.get("movies/#{id}/related")
   end
 
-  # COMING SOON™
   # Returns lots of show stats including ratings breakdowns, scrobbles, checkins, collections, lists, and comments.
+  # COMING SOON™
   def stats
+    raise NotImplementedError
     Birdman::Requester.get("movies/#{id}/stats")
   end
 
@@ -65,19 +60,19 @@ class Birdman::Movie < Birdman::ApiResource
   end
 
   # Returns the most popular movies. Popularity is calculated using the rating percentage and the number of ratings.
-  # Paginated
+  # 📄 Pagination
   def self.popular
     Birdman::Requester.get("movies/popular")
   end
 
   # Returns all movies being watched right now. Movies with the most users are returned first.
-  # Paginated
+  # 📄 Pagination
   def self.trending
     Birdman::Requester.get("movies/trending")
   end
 
   # Returns all movies updated since the specified UTC date. We recommended storing the date you can be efficient using this method moving forward.
-  # Paginated
+  # 📄 Pagination
   def self.updates(start_date=Time.now)
     Birdman::Requester.get("movies/updates/#{start_date.strftime("%Y-%m-%d")}")
   end

@@ -6,10 +6,6 @@ class Birdman::ApiPaginatedCollection
 
   attr_reader :total_pages, :total_results, :path, :params, :results_per_page
 
-  # The argument path refers to the TMDb api path that provides paginated resources.
-  # the argument params can be used when you need to send arguments to requests when fetching new pages.
-  # Example:
-  #   Birdman::MovieCollection.new("movie/upcoming", { blah: true })
   def initialize(path, params={})
     self.path = path
     self.params = params
