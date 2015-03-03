@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014
+    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014/watching
     body:
       encoding: US-ASCII
       string: ''
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4bad19c5f1ea5b442e60ae4a881f856d1425304435; expires=Tue, 01-Mar-16
+      - __cfduid=dbe8856ad85aa66799b956639e3233cdf1425304435; expires=Tue, 01-Mar-16
         13:53:55 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
-      - public, max-age=14400
+      - public, max-age=1800
+      Etag:
+      - W/"5aa4785111e3e2285e83581794d8c174"
       Expires:
-      - Mon, 02 Mar 2015 17:53:55 GMT
-      Last-Modified:
-      - Mon, 02 Mar 2015 10:45:58 GMT
+      - Mon, 02 Mar 2015 14:23:55 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -50,23 +50,27 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - a9f45c1f-f865-4920-a7e7-48e61da1ff6a
+      - 72660426-665d-43e8-b2f3-6905c8abbd24
       X-Runtime:
-      - '0.007569'
+      - '0.031979'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
       Cf-Ray:
-      - 1c0d972f47361371-LHR
+      - 1c0d97300fc906c4-LHR
       Content-Encoding:
       - gzip
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAx3LUQ7CIBCE4auYeabJAgplD+AJegFMsRDxBVYT0/TuDT7O
-        n292SJGawFhyutxr7BkKvxQb2JC+KpS1g3dIiy8BO7JECr1+NjAkp+k5PtOw
-        UJDv+gAbH7TRCuU9FkSsJm/meYB/cuTtbegWtwS2LthwHCc61XZJjAAAAA==
+        H4sIAAAAAAAAA52UzU7DMBCEXwX5HFDSQml7q4Q4gKi4cUAIrexts8R/sp2k
+        KeLdUQQHCmwi5eKDNd/M2Fr7+V3UEYMFg2ItsCE8NxAIRSZ8oAYSinUKNX5k
+        J0JZolXQ7n/KdqAjZuJLYWutM9GQ/97/xe8wdB49TOU3x4SyYmkhBtgWIplL
+        lh1JvidbdU/9wjoMpwcHSrHsSLpF6xaTuz84m4Cm0gbeSMERzMhseBcTWX40
+        Bq8nUXLOXawKFh9puU0ERpbTj/lYkta4XLL8YH8DQTrvtJvnrMFIARsVQZxM
+        E1b5LJ+xvNgS9i+HdVDQkCpW1wuo+Rbipled3WqkKEsD1g5a0p5eW0iyxDAy
+        PXdwOGDic4difEyhO/kV/gkIFEvqwBTzKzblzx2/fAL3CausKAUAAA==
     http_version: 
   recorded_at: Mon, 02 Mar 2015 13:53:55 GMT
 recorded_with: VCR 2.9.0

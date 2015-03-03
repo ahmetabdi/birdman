@@ -35,6 +35,13 @@ class Birdman::Requester
       end
     end
 
+    def delete(action)
+      url = api.url_for(action)
+      perform_request do
+        parse_response(RestClient.post(url, {}, request_headers))
+      end
+    end
+
   private
     def api
       Birdman::Configuration::Api.instance

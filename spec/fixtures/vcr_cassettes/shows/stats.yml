@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014
+    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014/stats
     body:
       encoding: US-ASCII
       string: ''
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4bad19c5f1ea5b442e60ae4a881f856d1425304435; expires=Tue, 01-Mar-16
+      - __cfduid=d996525d6b6ca70685d3151ecd22770731425304435; expires=Tue, 01-Mar-16
         13:53:55 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
+      Etag:
+      - W/"f5300085e0996801d1bba19298b19f54"
       Expires:
       - Mon, 02 Mar 2015 17:53:55 GMT
-      Last-Modified:
-      - Mon, 02 Mar 2015 10:45:58 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -50,23 +50,23 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - a9f45c1f-f865-4920-a7e7-48e61da1ff6a
+      - 58128f43-8ebe-4c42-9190-a757c025b2e2
       X-Runtime:
-      - '0.007569'
+      - '1.806605'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
       Cf-Ray:
-      - 1c0d972f47361371-LHR
+      - 1c0d9730a22b13a7-LHR
       Content-Encoding:
       - gzip
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAx3LUQ7CIBCE4auYeabJAgplD+AJegFMsRDxBVYT0/TuDT7O
-        n292SJGawFhyutxr7BkKvxQb2JC+KpS1g3dIiy8BO7JECr1+NjAkp+k5PtOw
-        UJDv+gAbH7TRCuU9FkSsJm/meYB/cuTtbegWtwS2LthwHCc61XZJjAAAAA==
+        H4sIAAAAAAAAA6tWKk8sSc5ILSpWsjI1MjU3t9BRKshJrCxWsjI0tTQ2MtBR
+        Ss7PyUlNLsnMz1OyMjY3MDTVUcrJLC4BqTAwsADJ5+am5oH4psa1AKf/qmtQ
+        AAAA
     http_version: 
   recorded_at: Mon, 02 Mar 2015 13:53:55 GMT
 recorded_with: VCR 2.9.0

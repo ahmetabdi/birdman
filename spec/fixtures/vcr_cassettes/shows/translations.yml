@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Mon, 02 Mar 2015 12:10:25 GMT
+      - Mon, 02 Mar 2015 13:53:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d614bb4f5a34ce095e2ab84aaaaa460231425298225; expires=Tue, 01-Mar-16
-        12:10:25 GMT; path=/; domain=.trakt.tv; HttpOnly
+      - __cfduid=d996525d6b6ca70685d3151ecd22770731425304435; expires=Tue, 01-Mar-16
+        13:53:55 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
       Etag:
       - W/"dbb0a5f2f44efe342d2c20859d3945db"
       Expires:
-      - Mon, 02 Mar 2015 16:10:25 GMT
+      - Mon, 02 Mar 2015 17:53:55 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -58,7 +58,7 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Cf-Ray:
-      - 1c0cff96b1b108d8-LHR
+      - 1c0d97324e7a13a7-LHR
       Content-Encoding:
       - gzip
     body:
@@ -150,5 +150,5 @@ http_interactions:
         moRLHUjWkZn+eM9N3/TTG5nej7abqEvnbTtD52PcG7wJrmmfqbAqnPrjf/wv
         e2sl9n8bAAA=
     http_version: 
-  recorded_at: Mon, 02 Mar 2015 12:10:25 GMT
+  recorded_at: Mon, 02 Mar 2015 13:53:55 GMT
 recorded_with: VCR 2.9.0

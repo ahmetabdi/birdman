@@ -107,104 +107,104 @@ describe Birdman::Show do
     end
   end
 
-  # describe ".people" do
-  #   subject(:people) { VCR.use_cassette("shows/people") do
-  #     movie.people
-  #   end }
+  describe ".people" do
+    subject(:people) { VCR.use_cassette("shows/people") do
+      show.people
+    end }
 
-  #   it "should return cast members" do
-  #     expect(people.cast).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return cast members" do
+      expect(people.cast).to be_kind_of(Array)
+    end
+  end
 
-  # describe ".ratings" do
-  #   subject(:ratings) { VCR.use_cassette("shows/ratings") do
-  #     movie.ratings
-  #   end }
+  describe ".ratings" do
+    subject(:ratings) { VCR.use_cassette("shows/ratings") do
+      show.ratings
+    end }
 
-  #   it "should return a rating" do
-  #     expect(ratings.rating).to eq(7.49677)
-  #   end
+    it "should return a rating" do
+      expect(ratings.rating).to eq(8.18697)
+    end
 
-  #   it "should return vote count" do
-  #     expect(ratings.votes).to eq(5723)
-  #   end
-  # end
+    it "should return vote count" do
+      expect(ratings.votes).to eq(4359)
+    end
+  end
 
-  # describe ".related" do
-  #   subject(:related) { VCR.use_cassette("shows/related") do
-  #     movie.related
-  #   end }
+  describe ".related" do
+    subject(:related) { VCR.use_cassette("shows/related") do
+      show.related
+    end }
 
-  #   it "should return an array of related movies" do
-  #     expect(movie.related).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return an array of related shows" do
+      expect(show.related).to be_kind_of(Array)
+    end
+  end
 
-  # describe ".stats" do
-  #   subject(:stats) { VCR.use_cassette("shows/stats") do
-  #     movie.stats
-  #   end }
+  describe ".stats" do
+    subject(:stats) { VCR.use_cassette("shows/stats") do
+      show.stats
+    end }
 
-  #   it "should return watcher count" do
-  #     expect(stats.watchers).to eq(26539)
-  #   end
+    it "should return watcher count" do
+      expect(stats.watchers).to eq(525778)
+    end
 
-  #   it "should return play counts" do
-  #     expect(stats.plays).to eq(25366)
-  #   end
+    it "should return play counts" do
+      expect(stats.plays).to eq(159320)
+    end
 
-  #   it "should return collection counts" do
-  #     expect(stats.collection).to eq(16459)
-  #   end
+    it "should return collection counts" do
+      expect(stats.collection).to eq(37015)
+    end
 
-  #   it "should return list count" do
-  #     expect(stats.lists).to eq(1749)
-  #   end
+    it "should return list count" do
+      expect(stats.lists).to eq(1008)
+    end
 
-  #   it "should return comment counts" do
-  #     expect(stats.comments).to eq(34)
-  #   end
-  # end
+    it "should return comment counts" do
+      expect(stats.comments).to eq(53)
+    end
+  end
 
-  # describe ".watching" do
-  #   subject(:watching) { VCR.use_cassette("shows/watching") do
-  #     movie.watching
-  #   end }
+  describe ".watching" do
+    subject(:watching) { VCR.use_cassette("shows/watching") do
+      show.watching
+    end }
 
-  #   it "should return an array of users watching this movie" do
-  #     expect(watching).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return an array of users watching this show" do
+      expect(watching).to be_kind_of(Array)
+    end
+  end
 
-  # describe "#popular" do
-  #   let(:popular) { VCR.use_cassette("shows/popular") do
-  #     Birdman::Movie.popular
-  #   end }
+  describe "#popular" do
+    let(:popular) { VCR.use_cassette("shows/popular") do
+      Birdman::Show.popular
+    end }
 
-  #   it "should return an array of popular movies" do
-  #     expect(popular).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return an array of popular shows" do
+      expect(popular).to be_kind_of(Array)
+    end
+  end
 
-  # describe "#trending" do
-  #   let(:trending) { VCR.use_cassette("shows/trending") do
-  #     Birdman::Movie.trending
-  #   end }
+  describe "#trending" do
+    let(:trending) { VCR.use_cassette("shows/trending") do
+      Birdman::Show.trending
+    end }
 
-  #   it "should return an array of trending movies" do
-  #     expect(trending).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return an array of trending shows" do
+      expect(trending).to be_kind_of(Array)
+    end
+  end
 
-  # describe "#updates" do
-  #   let(:updates) { VCR.use_cassette("shows/updates") do
-  #     Birdman::Movie.updates
-  #   end }
+  describe "#updates" do
+    let(:updates) { VCR.use_cassette("shows/updates") do
+      Birdman::Show.updates
+    end }
 
-  #   it "should return an array of updated movies" do
-  #     expect(updates).to be_kind_of(Array)
-  #   end
-  # end
+    it "should return an array of updated shows" do
+      expect(updates).to be_kind_of(Array)
+    end
+  end
 
 end

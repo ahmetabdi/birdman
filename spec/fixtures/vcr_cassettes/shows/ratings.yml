@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014
+    uri: https://api-v2launch.trakt.tv/shows/the-flash-2014/ratings
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Mon, 02 Mar 2015 13:53:55 GMT
+      - Mon, 02 Mar 2015 13:53:57 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,14 +35,14 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d4bad19c5f1ea5b442e60ae4a881f856d1425304435; expires=Tue, 01-Mar-16
-        13:53:55 GMT; path=/; domain=.trakt.tv; HttpOnly
+      - __cfduid=d206402451eb32579bfd5f3b89281e8ef1425304437; expires=Tue, 01-Mar-16
+        13:53:57 GMT; path=/; domain=.trakt.tv; HttpOnly
       Cache-Control:
       - public, max-age=14400
+      Etag:
+      - W/"15ceba07de692ee729e80d021a57609a"
       Expires:
-      - Mon, 02 Mar 2015 17:53:55 GMT
-      Last-Modified:
-      - Mon, 02 Mar 2015 10:45:58 GMT
+      - Mon, 02 Mar 2015 17:53:57 GMT
       Vary:
       - Accept-Encoding
       X-Content-Type-Options:
@@ -50,23 +50,23 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Request-Id:
-      - a9f45c1f-f865-4920-a7e7-48e61da1ff6a
+      - 0b4c0adf-2e65-4f0e-9a89-3048ebb197b5
       X-Runtime:
-      - '0.007569'
+      - '0.010250'
       X-Xss-Protection:
       - 1; mode=block
       Cf-Cache-Status:
       - HIT
       Cf-Ray:
-      - 1c0d972f47361371-LHR
+      - 1c0d973dd7a80cd1-LHR
       Content-Encoding:
       - gzip
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAx3LUQ7CIBCE4auYeabJAgplD+AJegFMsRDxBVYT0/TuDT7O
-        n292SJGawFhyutxr7BkKvxQb2JC+KpS1g3dIiy8BO7JECr1+NjAkp+k5PtOw
-        UJDv+gAbH7TRCuU9FkSsJm/meYB/cuTtbegWtwS2LthwHCc61XZJjAAAAA==
+        H4sIAAAAAAAAAzXIMQ7CMAxA0bv82UJ2nLSJb0MFQllaqQ0sVe+OGHjjO9nv
+        o68vot6sTm3WPxM+23geRPbShEc/xt6X9+jbSpwY4UlIhBXBiZSFTGQTCmGa
+        hIlIzYWZqOpCJcxchUbMSQXT37R8XV/2bkjZiQAAAA==
     http_version: 
-  recorded_at: Mon, 02 Mar 2015 13:53:55 GMT
+  recorded_at: Mon, 02 Mar 2015 13:53:57 GMT
 recorded_with: VCR 2.9.0

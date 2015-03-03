@@ -8,6 +8,7 @@ require "birdman/models/api_paginated_collection"
 require "birdman/models/genre"
 require "birdman/models/show"
 require "birdman/models/movie"
+require "birdman/models/episode"
 
 module Birdman
 

@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-v2launch.trakt.tv/shows/updates/2015-03-02
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/json
+      Trakt-Api-Version:
+      - '2'
+      Trakt-Api-Key:
+      - ''
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Mon, 02 Mar 2015 13:54:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9bd799accd1365f02172142d767e97921425304479; expires=Tue, 01-Mar-16
+        13:54:39 GMT; path=/; domain=.trakt.tv; HttpOnly
+      Cache-Control:
+      - public, max-age=14400
+      Etag:
+      - W/"589b16443ffcd431cbbcea039e355c4c"
+      Expires:
+      - Mon, 02 Mar 2015 17:54:39 GMT
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Pagination-Limit:
+      - '10'
+      X-Pagination-Page:
+      - '1'
+      X-Request-Id:
+      - de99e198-6ed0-465d-a09f-be258695e605
+      X-Runtime:
+      - '0.012351'
+      X-Xss-Protection:
+      - 1; mode=block
+      Cf-Cache-Status:
+      - MISS
+      Cf-Ray:
+      - 1c0d98444fdc0cd1-LHR
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA5WVXW/TMBSG/4rxDSDV6PjEH4nvAAlR8XXRDTQQQtnitVbb
+        BDXO2mraf0dOs8T7COvunCiv9bznnPfk1zVt/ha5t8Wf3FNDEbhkkDDAEwCD
+        ieHiDQD8pBNaL6otNdfUO7+y1NDpyzWZVZvNfkKm5HN1ZclZ1dAJ3dt8Qw0C
+        iAl1Rd1KNvnSU4Mo+YTWq2ZODXVszeogZ46tqivL9q3aXxXn1GRJpvmEunV4
+        oOF1e0JUMnyyyeeWmrJZrW5ubib/tyBNMmrhbV2dO1I6Ml02ZF+9iOg53KdP
+        tBJpj58HKSsdc8uG7auenOskgUfQE52CGthRYQZPwGsDYKQcg5/ZHcnLgviF
+        Je+d3/fwPMvS+/A8dKNDr+2O5WXB/MKyi4PwwK5V67BD9x64zBBU74HD86qv
+        DXCDo9WfuR35YK0np2VhN/HkhPrdxUelB363Y5fWetZ0uo5eChma1tOjSJUU
+        Az1qMeBL5OJJfC6NSMfwPzaltxuyI93hFQLnr+MRemBDCQFZ72PR6tiOdYeg
+        6N2gxAQxsoOQpYjQ2wn1f1Y3UiOVgWTMzsnCku+Vu7Dk9FNsIjDczUEmxBDj
+        MERXQcaaZQSvE55E8DzTHIUc0pApHjUDU6XSo/D1GP6HfOnKOZn6mP3BBlKA
+        WvXsl62GOR9K3w7KgV5rrrKIPuGoISq9Ah0nIdEC5VH0o7N0ZmvyxZWu9lEQ
+        eJY+WEJCouz597Zm60F1G+IUY3iAFJIoxEKKbGBXSutj0Md/A982eTm3ZFq3
+        i+ir3ZJ3q/wizELfhjAJd+Ms+OCiai9grm4XUmm37Ly7oGuHEjJVcRISjVzh
+        EGyB0SwdmwQ+OkohCT8WzlsyW+RFtY0aoh9ZrO26itKwDVJW30q7rqBol/LQ
+        Fa05tHHvViuE5dW35fB3+P0PbcWIOp8HAAA=
+    http_version: 
+  recorded_at: Mon, 02 Mar 2015 13:54:39 GMT
+recorded_with: VCR 2.9.0
