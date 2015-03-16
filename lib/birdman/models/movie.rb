@@ -27,7 +27,7 @@ class Birdman::Movie < Birdman::ApiResource
   end
 
   # Returns all top level comments for a movie. Most recent comments returned first.
-  # 📄 Pagination
+  # Pagination
   def comments
     Birdman::ApiPaginatedCollection.new("movies/#{id}/comments")
   end
@@ -50,7 +50,6 @@ class Birdman::Movie < Birdman::ApiResource
   # Returns lots of show stats including ratings breakdowns, scrobbles, checkins, collections, lists, and comments.
   # COMING SOON™
   def stats
-    raise NotImplementedError
     Birdman::Requester.get("movies/#{id}/stats")
   end
 

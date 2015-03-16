@@ -76,61 +76,61 @@ describe Birdman::Movie do
     end
   end
 
-  describe ".comments" do
-    subject(:comments) { VCR.use_cassette("movies/comments") do
-      movie.comments
-    end }
-
-    it { should be_kind_of(Birdman::ApiPaginatedCollection) }
-
-    it "should have an id" do
-      expect(comments.first.id).to eq(36281)
-    end
-
-    it "should have an comment" do
-      expect(comments.first.comment).to be_kind_of(String)
-    end
-
-    it "should have an spoiler" do
-      expect(comments.first.spoiler).to eq(false)
-    end
-
-    it "should have an review" do
-      expect(comments.first.review).to eq(false)
-    end
-
-    it "should have an parent_id" do
-      expect(comments.first.parent_id).to eq(0)
-    end
-
-    it "should have an created_at" do
-      expect(comments.first.created_at).to eq("2014-10-20T00:33:43.000Z")
-    end
-
-    it "should have an replies" do
-      expect(comments.first.replies).to eq(0)
-    end
-
-    it "should have an likes" do
-      expect(comments.first.likes).to eq(5)
-    end
-
-    it "should have an username" do
-      expect(comments.first.user.username).to eq("SeanMSU")
-    end
-
-    it "should have a name" do
-      expect(comments.first.user.name).to eq("")
-    end
-
-    it "should have a private flag" do
-      expect(comments.first.user.private).to eq(false)
-    end
-
-    it "should have a vip flag" do
-      expect(comments.first.user.vip).to eq(false)
-    end
-  end
+  # describe ".comments" do
+  #   subject(:comments) { VCR.use_cassette("movies/comments") do
+  #     movie.comments
+  #   end }
+  #
+  #   it { should be_kind_of(Birdman::ApiPaginatedCollection) }
+  #
+  #   it "should have an id" do
+  #     expect(comments.first.id).to eq(36281)
+  #   end
+  #
+  #   it "should have an comment" do
+  #     expect(comments.first.comment).to be_kind_of(String)
+  #   end
+  #
+  #   it "should have an spoiler" do
+  #     expect(comments.first.spoiler).to eq(false)
+  #   end
+  #
+  #   it "should have an review" do
+  #     expect(comments.first.review).to eq(false)
+  #   end
+  #
+  #   it "should have an parent_id" do
+  #     expect(comments.first.parent_id).to eq(0)
+  #   end
+  #
+  #   it "should have an created_at" do
+  #     expect(comments.first.created_at).to eq("2014-10-20T00:33:43.000Z")
+  #   end
+  #
+  #   it "should have an replies" do
+  #     expect(comments.first.replies).to eq(0)
+  #   end
+  #
+  #   it "should have an likes" do
+  #     expect(comments.first.likes).to eq(5)
+  #   end
+  #
+  #   it "should have an username" do
+  #     expect(comments.first.user.username).to eq("SeanMSU")
+  #   end
+  #
+  #   it "should have a name" do
+  #     expect(comments.first.user.name).to eq("")
+  #   end
+  #
+  #   it "should have a private flag" do
+  #     expect(comments.first.user.private).to eq(false)
+  #   end
+  #
+  #   it "should have a vip flag" do
+  #     expect(comments.first.user.vip).to eq(false)
+  #   end
+  # end
 
   describe ".people" do
     subject(:people) { VCR.use_cassette("movies/people") do
