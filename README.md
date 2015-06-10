@@ -1,6 +1,6 @@
 # Birdman
 
-![Trakt Banner](https://raw.github.com/ahmetabdi/birdman/master/birdman.png?token=AAvfH7ewBVlwbhOoCvVU42kO1WOImKaCks5U_vMlwA%3D%3D)
+![Trakt Banner](https://d262ilb51hltx0.cloudfront.net/max/867/1*sz-qvGm-sHeilqKDe16kug.png)
 
 ## Installation
 
